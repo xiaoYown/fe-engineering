@@ -6,4 +6,3 @@
 - husky
 - commitizen
 - pm2
-
