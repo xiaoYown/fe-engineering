@@ -7,8 +7,10 @@
   "author": "",
   "main": "index.js",
   "scripts": {
+    "bump": "changeset add",
+    "bump:v": "changeset version",
     "commit": "git-cz",
-    "format": "prettier . --write --cache --list-different \"**/*.{ts,tsx,css,json}\"",
+    "format": "prettier . --write --cache --list-different \"**/*.{ts,tsx,css,json,cjs.js}\"",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +26,7 @@
     }
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.10",
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "@commitlint/cz-commitlint": "^19.5.0",

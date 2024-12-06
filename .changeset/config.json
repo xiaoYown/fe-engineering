@@ -1,0 +1,14 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.0.4/schema.json",
+  "access": "restricted",
+  "baseBranch": "main",
+  "changelog": [
+    "./changesets-changelog-git.cjs.js",
+    { "repo": "xiaoYown/fe-engineering" }
+  ],
+  "commit": false,
+  "fixed": [],
+  "ignore": [],
+  "linked": [],
+  "updateInternalDependencies": "patch"
+}
