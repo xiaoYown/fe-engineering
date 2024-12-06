@@ -13,7 +13,7 @@
     "format": "prettier . --write --cache --list-different \"**/*.{ts,tsx,css,json,cjs.js}\"",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "pm2 start production.ecosystem.config.js"
   },
   "lint-staged": {
     "*.{ts,tsx,css,mjs,json,yaml}": [
