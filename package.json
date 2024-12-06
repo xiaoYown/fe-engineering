@@ -10,8 +10,9 @@
     "bump": "changeset add",
     "bump:v": "changeset version",
     "commit": "git-cz",
-    "format": "prettier . --write --cache --list-different \"**/*.{ts,tsx,css,json,cjs.js}\"",
+    "format": "prettier . --write --cache --list-different \"**/*.{ts,tsx,css,json,js,mjs}\"",
     "preinstall": "npx only-allow pnpm",
+    "lint": "pnpm --filter './production/**' lint",
     "prepare": "husky",
     "start": "pm2 start production.ecosystem.config.js"
   },
