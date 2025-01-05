@@ -7,7 +7,9 @@
     "build": "tsc -b && vite build",
     "dev": "vite",
     "preinstall": "npx only-allow pnpm",
-    "lint": "eslint . --cache --quiet --fix",
+    "lint": "pnpm lint:check && pnpm lint:fix",
+    "lint:check": "tsc --noEmit --project tsconfig.app.json",
+    "lint:fix": "node ../../lint-changed.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,6 +17,7 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.0",
+    "@types/node": "^22.10.5",
     "eslint": "9.16.0",
     "eslint-plugin-solid": "0.14.4",
     "globals": "15.13.0",

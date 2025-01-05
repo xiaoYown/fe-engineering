@@ -1,3 +1,4 @@
+// @ts-check
 import pluginJs from '@eslint/js';
 import * as tsParser from '@typescript-eslint/parser';
 
@@ -5,21 +6,21 @@ import solid from 'eslint-plugin-solid/configs/recommended';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default tseslint.config(
   pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     files: ['**/*.{ts,tsx}'],
     ...solid,
     languageOptions: {
       parser: tsParser,
       parserOptions: {
-        projectService: 'tsconfig.json',
+        // @ts-ignore
+        projectService: 'app.tsconfig.json',
       },
       globals: globals.browser,
     },
   },
-  ...tseslint.configs.recommended,
   {
     ignores: ['**/node_modules/**/*', '**/dist/**/*', 'eslint.config.js'],
   },
@@ -42,4 +43,4 @@ export default [
       ],
     },
   },
-];
+);

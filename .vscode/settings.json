@@ -5,6 +5,9 @@
   "[properties]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "eslint.enable": true,

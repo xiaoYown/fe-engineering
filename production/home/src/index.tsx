@@ -7,4 +7,4 @@ import './index.css';
 
 const root = document.getElementById('root');
 
-render(() => <App />, root!);
+render(() => <App />, root as HTMLElement);
